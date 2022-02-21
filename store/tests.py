@@ -1,14 +1,22 @@
-from audioop import reverse
-from pydoc import resolve
-from django.test import Client, SimpleTestCase,TestCase
-from store.views import home, detail, all_categories, orders, add_to_cart, checkout, remove_cart, plus_cart, minus_cart, cart, Orders,
-from django.urls import reverse, resolve
+from codecs import register
+from django.urls import reverse,resolve
+from django.test import SimpleTestCase, TestCase, Client
+from .views import *
+from django.contrib.auth.models import User
 
 
 class TestUrls(SimpleTestCase):
-    def test_case_home_url(self):
-        url=reverse('store:home')
-        self.assertEquals(resolve(url).func, home)
+    def test_home_url(self):
+        url=reverse("store:home")
+        self.assertEquals(resolve(url).func,home)
+
+    def test_checkout_url(self):
+        url=reverse("store:checkout")
+        self.assertEquals(resolve(url).func,checkout)
+
+    def test_orders_url(self):
+        url=reverse("store:orders")
+        self.assertEquals(resolve(url).func,orders)
 
     def test_case_checkout_url(self):
         url=reverse("store:checkout")
@@ -31,6 +39,7 @@ class TestUrls(SimpleTestCase):
         self.assertEquals(resolve(url).func,cart)
 
     
-    
+        
 
-# Create your tests here.
+
+
