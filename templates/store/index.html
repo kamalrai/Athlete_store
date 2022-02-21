@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+      {% block content %}
+
+     
+      <div class="container bg-dark">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({% static 'img/athelete_store.jpg' %})">
+          <div class="container py-5">
+            <div class="row px-4 px-lg-5">
+              <div class="col-lg-6">
+                <hr>
+                <p class="h2 text-uppercase mb-2"style="color:white;">Hot deals 2078!!</p>
+                <hr>
+                <h1 class="h2 text-uppercase mb-2"style="color:white;">New items this season</h1><a class="btn btn-dark" href="{% url 'store:all-categories' %}">View Items</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="pt-5">
+          <header class="text-center">
+            <p class="h2 text-uppercase mb-4" style="color:white;">Learn more</p>
+            <h2 class="h2 text-uppercase mb-4"style="color:white;">About us</h2>
+            <hr>
+            <p class="h5 text-uppercase mb-4" style="color:white;">Our group at Athlete Store belive there is a better way to search, order and buy for athletic products. Our group consists of highly passionate and motivated individuas as workers to provide the best customers service and experience. Our goal is to make shoping for athletic equipments cheap, fast and more accesable</p>
+            <hr>
+            <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({% static 'banner.jpg' %}"></section>
+          </header>
+          <div class="row">
+        </section>
+
+        <!-- SERVICES-->
+        <section class="py-5 bg-light">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-lg-4 mb-3 mb-lg-0">
+                <div class="d-inline-block">
+                  <div class="media align-items-end">
+                    <svg class="svg-icon svg-icon-big svg-icon-light">
+                      <use xlink:href="#delivery-time-1"> </use>
+                    </svg>
+                    <div class="media-body text-left ml-3">
+                      <h6 class="text-uppercase mb-1">Cheap shipping</h6>
+                      <p class="text-small mb-0 text-muted">Cheap delivery inside valley</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-3 mb-lg-0">
+                <div class="d-inline-block">
+                  <div class="media align-items-end">
+                    <svg class="svg-icon svg-icon-big svg-icon-light">
+                      <use xlink:href="#helpline-24h-1"> </use>
+                    </svg>
+                    <div class="media-body text-left ml-3">
+                      <h6 class="text-uppercase mb-1">24 x 7 service</h6>
+                      <p class="text-small mb-0 text-muted">Our webpage is up 24 x 7</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="d-inline-block">
+                  <div class="media align-items-end">
+                    <svg class="svg-icon svg-icon-big svg-icon-light">
+                      <use xlink:href="#label-tag-1"> </use>
+                    </svg>
+                    <div class="media-body text-left ml-3">
+                      <h6 class="text-uppercase mb-1">Event Offers</h6>
+                      <p class="text-small mb-0 text-muted">Get discounted prices during events</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- NEWSLETTER-->
+        <section class="py-5">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col-lg-6 mb-3 mb-lg-0">
+                <h5 class="text-uppercase">Stay updated</h5>
+                <p class="text-small text-muted mb-0">Get the latest news and festive offers and deals</p>
+              </div>
+              <div class="col-lg-6">
+                <form action="#">
+                  <div class="input-group flex-column flex-sm-row mb-3">
+                    <input class="form-control form-control-lg py-3" type="email" placeholder="Enter your email address" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-light btn-block" id="button-addon2" type="submit">Subscribe</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {% endblock content %}
